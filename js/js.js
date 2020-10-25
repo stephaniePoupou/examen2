@@ -102,72 +102,12 @@ ctx.fill();
 // Valider formulaire
 
 function validate(){
-    let name = document.forms['apply']['name'].value;
-    let prenom = document.forms['apply']['prenom'].value;
-    let birthday = document.forms['apply']['birthday'].value;
-    let code = document.forms['apply']['code'].value;
-    let number = document.forms['apply']['number'].value;
-    let email = document.forms['apply']['email'].value;
-    let door_num = document.forms['apply']['door-num'].value;
-    let city = document.forms['apply']['city'].value;
-    let province = document.forms['apply']['province'].value;
-    let zip = document.forms['apply']['zip'].value;
-    let job = document.forms['apply']['job'].value;
+    var code = document.getElementById("code").value;
 
-
-    if (name == ""){
-        alert("Veuillez remplir le champ Nom");
+    if (code !== "819" && code !== "418" && code !== "514"){
+        alert("Le code régionnal doit être compris parmis 819, 514 ou 418");
         return false;
     }
-
-    else if (prenom == ""){
-         alert("Veuillez remplir le champ Prénom");
-        return false;
-    }
-
-    else if (code == ""){
-         alert("Veuillez entrer le code régionnal");
-        return false;
-    }
-
-    else if (number == ""){
-         alert("Veuillez entrer votre numéro de téléphone");
-        return false;
-    }
-
-    else if (email == ""){
-         alert("Veuillez entrer votre adresse courriel");
-        return false;
-    }
-
-    else if (door_num == ""){
-         alert("Veuillez entrer votre numéro de porte");
-        return false;
-    }
-
-     else if (city == ""){
-         alert("Veuillez entrer la ville");
-        return false;
-    }
-
-    else if (province == ""){
-         alert("Veuillez inscrire la province ou l'état");
-        return false;
-    }
-
-     else if (zip == ""){
-         alert("Veuillez entrer votre code postale");
-        return false;
-    }
-
-     else if (job == ""){
-         alert("Veuillez inscrire votre métier");
-        return false;
-    }
-
-     if (code !== "819" || "418" || "514"){
-         alert("Le code régionnal doit être compris parmis 819, 514 ou 418");
-     }
 
      alert("Formulaire envoyé avec succès!");
 }
