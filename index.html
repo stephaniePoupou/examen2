@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Destination Mars</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap-grid.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-xl-8">
+                <card>
+                    <div class="card-body">
+                        <h2>Participer à l'avenir de la race humaine</h2>
+                        <p>Inscrivez-vous à la prochaine mission de colonisation sur Mars!</p>
+                        <hr>
+
+                        <div class="form">
+                            <form autocomplete="on" id="apply" class="d-block" method="post" onsubmit="return validate()" action="#">
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6 class="required">Identification</h6>
+                                    </div>
+                                    <div class="col-8 offset-1">
+                                        <div class="form-group mb-0">
+                                            <input required aria-required="true" id="name" name="name" type="text" size="15" maxlength="100">
+                                            <input required aria-required="true" id="prenom" name="prenom" type="text" size="25" maxlength="100">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name"> Nom</label>
+                                            <label class="left-side-name" for="prenom">Prénom</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6 class="required">Date de naissance</h6>
+                                    </div>
+                                    <div class="col-8 offset-1">
+                                        <div class="form-group">
+                                            <label for="birthday" aria-hidden="true" class="d-none">date de naissance</label>
+                                            <input required aria-required="true" type="date" id="birthday" name="birthday" size="40" min="1899-01-01" max="2002-12-31">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6 class="required">Numéro de téléphone</h6>
+                                    </div>
+                                    <div class="col-8 offset-1">
+                                        <div class="form-group mb-0">
+                                            <input required aria-required="true" type="tel" id="code" name="code" pattern="[0-9]{3}" size="6">
+                                            <span>-</span>
+                                            <input required aria-required="true"  type="tel" id="number" name="number" pattern="[0-9]{3}-[0-9]{4}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="code">Code régionnal</label>
+                                            <label class="left-side-phone" for="number">Numéro de téléphone</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6 class="required">E-mail</h6>
+                                    </div>
+                                    <div class="col-8 offset-1">
+                                        <div class="form-group mb-0">
+                                            <input required aria-required="true" type="email" id="email" name="email" placeholder="ex : myname@exemple.com" size="43">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">exemple@exemple.com</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6 class="required">Adresse</h6>
+                                    </div>
+                                    <div class="col-8 offset-1">
+                                        <div class="form-group mb-0">
+                                            <input required aria-required="true" type="text" id="door-num" name="door-num" size="50" pattern="[0-9]*">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="door-num">Numéro de porte</label>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <input type="text" id="app" name="app" size="50">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="app">Numéro d'appartement</label>
+                                        </div>
+
+                                        <div class="form-group mb-0">
+                                            <input required aria-required="true" type="text" id="city" name="city" size="20">
+                                            <input required aria-required="true" type="text" id="province" name="province" size="20">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="city">Ville</label>
+                                            <label class="left-side-city" for="province">État/province</label>
+                                        </div>
+
+                                        <div class="form-group mb-0">
+                                            <input required aria-required="true"  type="text" id="zip" name="zip" size="20" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="zip">Code postal</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6 class="required">Sexe</h6>
+                                    </div>
+                                    <div class="col-8 offset-1">
+                                        <div class="form-group">
+                                            <select required aria-required="true" name="sex" id="sex" form="apply">
+                                                <option selected="" value="">Sélectonner</option>
+                                                <option value="Homme">Homme</option>
+                                                <option value="Femme">Femme</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="sex" class="d-none">Sexe</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6 class="required">Métier</h6>
+                                    </div>
+                                    <div class="col-8 offset-1">
+                                        <div class="form-group">
+                                            <input required aria-required="true" type="text" id="job" name="job" size="25">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="job" class="d-none">Métier</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-3">
+                                        <h6>Présentation</h6>
+                                    </div>
+                                    <div class="col-8 offset-1">
+                                        <div class="form-group">
+                                            <textarea id="about" name="about" cols="40" rows="7"></textarea>
+                                            <label for="about" class="d-none">Présentation</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-8 offset-4">
+                                        <div class="form-group">
+                                            <input class="button" type="submit" value="Soumettre ma candidature">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </card>
+            </div>
+            <div class="col-xl-4 col-12 p-0">
+                <canvas id="logo" height="393" width="483"></canvas>
+
+                <svg width="483" height="400" >
+                    <polyline points="242,2 302,115 270,115 270,250 212,250 212,115 180,115 242,2"></polyline>
+                    <text x="135" y="300" fill="white">Destination</text>
+                </svg>
+<!--                paypal ne me laisse pas avec mon account mettre l'option de crédit, le support paypal ne peut rien pour moi-->
+                <div class="paypal-wrapper">
+                    <div id="smart-button-container">
+                        <div style="text-align: center;">
+                            <div id="paypal-button-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=CAD" data-sdk-integration-source="button-factory"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="bootstrap-4.5.3-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-4.5.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

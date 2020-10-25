@@ -1,0 +1,92 @@
+body{
+    overflow-x: hidden;
+}
+
+.container-fluid{
+    background: #000000;
+}
+
+hr{
+    background: #ffffff;
+}
+
+.card-body{
+    background: #222222;
+    color: white;
+    margin: 2.8125rem 0.9375rem;
+}
+
+canvas{
+    margin-top: 14rem;
+}
+
+form{
+    padding-top: 1.875rem;
+}
+
+.left-side-name{
+    margin-left: 115px;
+}
+
+.left-side-city{
+    margin-left: 155px;
+}
+
+h6.required:after{
+    content: '*';
+    color: red;
+}
+
+label{
+    font-size: 0.625rem !important;
+}
+
+.left-side-phone{
+    margin-left: 20px;
+}
+
+.paypal-wrapper{
+    background: white;
+    margin: 15px 30px 15px 0;
+    padding: 0.9375rem;
+}
+
+h6{
+    margin-bottom: 3.75rem !important;
+}
+
+polyline{
+    fill: white;
+    stroke: white;
+    stroke-width: 0;
+}
+
+svg text{
+    font-family: Monaco, sans-serif;
+    font-size: 2rem;
+}
+
+.button{
+    height: 2.5rem;
+    padding: 0 15px;
+    color: darkgrey;
+}
+
+textarea{
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    canvas{
+        margin-top: 0;
+    }
+
+    .paypal-wrapper{
+        margin: 15px 30px 15px 30px;
+    }
+
+    input, textarea{
+        max-width: 100% !important;
+    }
+}
