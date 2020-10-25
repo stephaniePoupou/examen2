@@ -165,6 +165,10 @@ function validate(){
         return false;
     }
 
+     if (code !== "819" || "418" || "514"){
+         alert("Le code régionnal doit être compris parmis 819, 514 ou 418");
+     }
+
      alert("Formulaire envoyé avec succès!");
 }
 
